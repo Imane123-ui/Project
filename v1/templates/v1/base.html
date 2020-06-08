@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - Tripsy</title>
+    <link rel="stylesheet" href="{% static "v1/css/tripsy_style.css" %}">
+</head>
+<body>
+    {% include "v1/header.html" %}
+    {% block content %}{% endblock %}
+    {% include "v1/footer.html" %}
+</body>
+</html>
