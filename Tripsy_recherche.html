@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="tripsy_style.css" />
+        <title>Tripsy - Accueil</title>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="en-tete">
+                	<div id="logo">
+                        <img src="tripsy_logo.png" 
+                        style="width: 100%;"
+                        alt="Logo de Tripsy"
+                        class = "imageflottante" />
+                    </div> 
+                	<div id="slogan">
+	                	<h1>Voyagez EASY</h1>
+	                </div> 
+
+                    <nav>
+                        <li class="mon_profil"><a href="#">Mon Profil</a>
+                            <ul class="deroulant">
+                                <li><a href="Tripsy_connexion.html">Connexion;</a></li>
+                                <li><a href="#">Mes informations</a></li>
+                                <li><a href="#">Mes voyages</a></li>
+                                <li><a href="#">Déconnexion;</a></li>
+                            </ul>
+                        </li>
+                    </nav>
+                </div>
+                
+                <nav>
+                    
+                </nav>
+            </header>
+            
+            
+            <section>
+                <p class="blocktext">Que recherchez-vous ?</p>
+            	<div id="searchbar">
+				    <form action="">
+				        <input class="champ" type="text" placeholder="Chateau de Fontainebleau, Nîme ..."/>
+				        <input class="bouton" type="button" value=" " />
+				    </form>
+				</div>
+                <div class="slidecontainer">
+                  <input type="range" min="0" max="25" value="5" 
+                  step="5" id="distance" list="distance_list">
+                
+                    <datalist id="distance_list">
+                        <option value="0" label="0km"></option>
+                        <option value="5" label="5km"></option>
+                        <option value="10" label="10km"></option>
+                        <option value="15" label="15km"></option>
+                        <option value="20" label="20km"></option>
+                        <option value="25" label="25km"></option>
+                    </datalist>
+                    <label for="distance"> distance en km</label>
+                </div>
+
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="1000" step = "100"
+                    value="500" id="price" list="price_list">
+                    <datalist id="price_list">
+                      <option value="0" label="1€"></option>
+                      <option value="100"></option>
+                      <option value="200"></option>
+                      <option value="300"></option>
+                      <option value="400"></option>
+                      <option value="500" label="500€"></option>
+                      <option value="600"></option>
+                      <option value="700"></option>
+                      <option value="800"></option>
+                      <option value="900"></option>
+                      <option value="1000" label="1000€"></option>
+                    </datalist>
+                    <label for="price">prix en €</label> 
+                </div>
+
+                <div id = "cases">
+                    <div>
+                      <input type="checkbox" id="enfants" checked>
+                      <label for="enfants">Enfants autorisés</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="handicape" >
+                      <label for="handicape">Accès handicapé</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="parking" checked>
+                      <label for="parking">Scales</label>
+                    </div>
+
+                    <div>
+                      <input type="checkbox" id="wifi">
+                      <label for="wifi">Wifi gratuit</label>
+                    </div>
+                </div>
+
+
+
+
+                <article>
+                    
+                </article>
+                <aside>
+                    
+                </aside>
+            </section>
+            
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>
+</code>
