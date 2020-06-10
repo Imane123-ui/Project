@@ -216,7 +216,7 @@ p.blocktext
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
 }
 
 /* The slider itself */
@@ -244,28 +244,26 @@ p.blocktext
 
 label{
     color :white;
+    font-weight: bold;
 }
 
 datalist {
-    width: 50%;
+    width: 60%;
     display: flex;
-    position: right;
-    color: white;
-}
-#price_list{
     color: white;
 }
 
+
 datalist option {
     -webkit-box-flex: 1;
-    flex-grow: 1;
+    flex-grow: 1.2;
     -webkit-flex-basis: 0;
 }
 #cases
 {
     display: flex;
     justify-content: space-around;
-    color : white;
-    font-weight: bold;
+}
+#preferences_choice{
 
 }
