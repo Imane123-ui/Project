@@ -39,7 +39,11 @@
         </header>
         
         <section>
-            <p  class="blocktext">Mes préférences:</p>
+
+            <p  class="blocktext">Mes préférences :</p>
+
+            <div id="centerall">
+
             <input list="preferences" id="preferences_choice" 
             name="centre d'intérêt 1" />
             <input list="preferences" id="preferences_choice" 
@@ -49,6 +53,17 @@
             <input list="preferences" id="preferences_choice" 
             name="centre d'intérêt 4" />
 
+            <p> </p>
+
+            <form action="">
+
+                	<input class="bouton" type="button" 
+                    value="Envoyer">
+                    
+            </form>
+
+        	</div>
+
             <datalist id="preferences">
                 <option value="Animaux autorisés"></option>
                 <option value="Supérette à proximité"></option>
@@ -57,6 +72,8 @@
                 <option value="Enfants autorisés"></option>
                 <option value="Accès handicapé"></option>
             </datalist>
+
+                
         </section>
         <section>
             <p class="blocktext">Connexion à Tripsy</p>
@@ -66,27 +83,39 @@
 			        
 			    </form>
 			</div>
+			<div id="fullbar">
+			    <form action="">
+			        <input class="champ" type="text" placeholder="Ancien Mot de passe"/>
+			        
+			    </form>
+			</div>
             <div id="demibar">
                 <form action="">
                     <input class="champ" type="password" 
-                    placeholder="Mot de passe"/>
+                    placeholder="Nouveau Mot de passe"/>
                     
                 </form>
             </div>
             <div id="demibar">
                 <form action="">
                     <input class="champ" type="password" 
-                    placeholder="Confirmer mot de passe"/>
+                    placeholder="Confirmer le mot de passe"/>
                     
                 </form>
             </div>
             <div id="demibar">
+
+				<div id="centerall">
+
                 <form action="">
 
                 	<input class="bouton" type="button" 
                     value="Valider les modifications">
                     
                 </form>
+
+            	</div>
+
             </div>
         </section>
 

@@ -172,6 +172,13 @@ p.blocktext
     margin-right: auto;
 }
 
+#centerall
+{
+	
+	text-align: center;
+
+}
+
 #fullbar .text{
     width:30%;
     float:left;    
@@ -265,5 +272,6 @@ datalist option {
     justify-content: space-around;
 }
 #preferences_choice{
+
 
 }
