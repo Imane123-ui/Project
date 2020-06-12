@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="tripsy_style.css" />
-        <title>Tripsy - Accueil</title>
+        <title>Tripsy - Recherche</title>
     </head>
     
     <body>
@@ -38,47 +38,54 @@
             </header>
             
             
-            <section>
-                <p class="blocktext">Que recherchez-vous ?</p>
+
+                <label for="searchbar"> - Que recherchez-vous ?</label>
+
+                </br></br>
+
             	<div id="searchbar">
 				    <form action="">
 				        <input class="champ" type="text" placeholder="Chateau de Fontainebleau, Nîme ..."/>
 				        <input class="bouton" type="button" value=" " />
 				    </form>
 				</div>
-                <div class="slidecontainer">
-                  <input type="range" min="0" max="25" value="5" 
-                  step="5" id="distance" list="distance_list">
-                
-                    <datalist id="distance_list">
-                        <option value="0" label="0km"></option>
-                        <option value="5" label="5km"></option>
-                        <option value="10" label="10km"></option>
-                        <option value="15" label="15km"></option>
-                        <option value="20" label="20km"></option>
-                        <option value="25" label="25km"></option>
-                    </datalist>
-                    <label for="distance"> distance en km</label>
-                </div>
 
-                <div class="slidecontainer">
-                    <input type="range" min="0" max="1000" step = "100"
-                    value="500" id="price" list="price_list">
-                    <datalist id="price_list">
-                      <option value="0" label="1€"></option>
-                      <option value="100"></option>
-                      <option value="200"></option>
-                      <option value="300"></option>
-                      <option value="400"></option>
-                      <option value="500" label="500€"></option>
-                      <option value="600"></option>
-                      <option value="700"></option>
-                      <option value="800"></option>
-                      <option value="900"></option>
-                      <option value="1000" label="1000€"></option>
-                    </datalist>
-                    <label for="price">prix en €</label> 
-                </div>
+				</br></br>
+
+                <label for="distance"> - Distance en Km :</label>
+
+				<div class="containersliderjs">
+  				<div class="range-slider">
+    			<span id="rs-bullet" class="rs-label">0</span>
+    			<input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="25">
+  				</div>
+  				<div class="box-minmax">
+    			<span>0 Km</span><span>25 Km</span>
+  				</div>
+				</div>
+
+				<!--<script src="scriptjs.js"></script>-->
+
+				</br></br>
+
+                <label for="price"> - Prix en Euro(s) :</label> 
+
+
+				<div class="containersliderjsbis">
+  				<div class="range-sliderbis">
+    			<span id="rs-bulletbis" class="rs-labelbis">1</span>
+    			<input id="rs-range-linebis" class="rs-rangebis" type="range" value="0" min="0" max="1000">
+  				</div>
+  				<div class="box-minmaxbis">
+    			<span>0 €</span><span>1 000 €</span>
+  				</div>
+				</div>
+
+				<script src="scriptjs.js"></script>
+
+
+				</br></br></br>
+
 
                 <div id = "cases">
                     <div>
@@ -101,8 +108,17 @@
                     </div>
                 </div>
 
+</br></br></br></br>
 
+ Test Carte ci-dessous :
 
+                <div id="searchbar">
+
+                </br>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.61828575199!2d3.046571715595865!3d50.634207481988376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d578da129f7d%3A0xd134d73fb7f4c699!2sISEN%20Lille!5e0!3m2!1sfr!2sfr!4v1591798375244!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            	</div>
 
                 <article>
                     
@@ -110,6 +126,10 @@
                 <aside>
                     
                 </aside>
+
+
+
+
             </section>
             
             <footer>

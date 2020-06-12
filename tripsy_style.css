@@ -64,6 +64,9 @@ nav > li:hover .deroulant /*le sous-menu apparait*/
     padding: 10px
     border-bottom: none;
 }
+ul{
+  background-color: #C6BEAB;
+}
 
 #pageConnexion
 {
@@ -252,19 +255,22 @@ p.blocktext
 label{
     color :white;
     font-weight: bold;
+    position: center;
 }
 
 datalist {
-    width: 60%;
+    width: 50%;
     display: flex;
     color: white;
+    justify-content: space-between;
 }
 
 
 datalist option {
     -webkit-box-flex: 1;
-    flex-grow: 1.2;
-    -webkit-flex-basis: 0;
+    flex-grow: 1.4;
+
+
 }
 #cases
 {
@@ -275,3 +281,112 @@ datalist option {
 
 
 }
+
+
+
+/* Slider JS ci Dessous */
+
+.containersliderjs 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-minmax
+{
+  margin-top: 30px;
+  width: 608px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #383838;
+}
+.range-slider 
+{
+    margin-top: 4vh;   
+}
+.rs-range 
+{
+    margin-top: 5px;
+    width: 600px;
+}
+.rs-label 
+{
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3px;
+    box-sizing: border-box;
+    border: 2px solid #383838;
+    margin-top: 0px;
+    margin-left: -18.5px;
+    left: attr(value);
+    color: #383838;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 36px;
+}
+
+.containersliderjsbis 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-minmaxbis
+{
+  margin-top: 30px;
+  width: 608px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: #383838;
+}
+.range-sliderbis 
+{
+    margin-top: 4vh;   
+}
+.rs-rangebis 
+{
+    margin-top: 5px;
+    width: 600px;
+}
+.rs-labelbis 
+{
+    position: relative;
+    transform-origin: center center;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: transparent;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border: 2px solid #383838;
+    margin-top: 0px;
+    margin-left: -18.5px;
+    left: attr(value);
+    color: #383838;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 25px;
+}
+
+
+/* Fin Slider JS */
