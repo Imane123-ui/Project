@@ -48,7 +48,9 @@ nav li:after{
     clear: both;
 
 }
-
+.mon_profil{
+    background-color: #C6BEAB; 
+}
 .deroulant{/*sous menu caché*/
     display: none;
     z-index: 1000;
@@ -78,17 +80,11 @@ ul{
 
 
 /*contenu*/
-#pageRechercheAvancee
-{
-	text-align: center;
-	font-size: 120%;
-}
-
 a
 {
 	outline: initial;
 	text-decoration: none;
-	background-color: #C6BEAB;
+	
 	color:indigo;
 }
 a:hover
