@@ -80,17 +80,38 @@ ul{
 
 
 /*contenu*/
-a
+a.button
 {
 	outline: initial;
 	text-decoration: none;
-	
 	color:indigo;
+	display: inline-block;
+	text-align: center;
+	margin: auto;
 }
-a:hover
+a.button:hover
 {/*modifie la couleur du texte des hyperliens quand la souris est dessus*/
 	color:green;
 }
+
+/*a.mybutton {
+
+ display: inline-block;
+ width: 200px;
+ height: 50px;
+ line-height: 50px;
+ vertical-align: middle;
+ text-align: center;
+ font-family: Arial,sans-serif;
+ font-size: medium; 
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ background: blue;
+}
+
+a.mybutton:hover { background: red; color: black; }*/
+
 h1 
 {
 	font-size: 40px; /* titre gigantesque */
@@ -175,6 +196,7 @@ p.blocktext
 {
 	
 	text-align: center;
+	margin: auto;
 
 }
 
