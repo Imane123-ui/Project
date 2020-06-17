@@ -1,19 +1,19 @@
 body
 {
-	/*background-color: #E9B85E;*/
-	background-image: url("dune_du_pilat.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin : auto;
-	width: 100%;
+    /*background-color: #E9B85E;*/
+    background-image: url("dune_du_pilat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin : auto;
+    width: 100%;
 }
 
 /*en-tête*/
 #en-tete
 {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0px;
 }
 #logo
 {
@@ -24,8 +24,8 @@ body
 #slogan
 {
     max-width: 25%;
-	align-self: center;
-	
+    align-self: center;
+    
 
 }
 nav
@@ -49,14 +49,23 @@ nav li:after{
 
 }
 .mon_profil{
-    background-color: #C6BEAB; 
+    background-color: #C6BEAB;
+    text-decoration: none;
+    color: indigo; 
 }
+
+.mon_profil > ul:hover{
+    color:green;
+}
+
 .deroulant{/*sous menu caché*/
     display: none;
     z-index: 1000;
 }
 nav > li:hover .deroulant /*le sous-menu apparait*/
-{ display: block; }
+{ 
+    display: block;
+ }
 
 .deroulant li{
     float: none;
@@ -72,30 +81,36 @@ ul{
 
 #pageConnexion
 {
-	text-align: right;	
-	align-self: flex-start;
-	margin-left: 0.2em;
-	font-size: 1.5em;
+    text-align: right;  
+    align-self: flex-start;
+    margin-left: 0.2em;
+    font-size: 1.5em;
 }
 
 
 /*contenu*/
+a
+{
+    outline: initial;
+    text-decoration: none;
+    color:indigo;
+}
+
 a.button
 {
-	outline: initial;
-	text-decoration: none;
-	color:indigo;
-	display: inline-block;
-	text-align: center;
-	margin: auto;
+    outline: initial;
+    text-decoration: none;
+    color:indigo;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
 }
 a.button:hover
 {/*modifie la couleur du texte des hyperliens quand la souris est dessus*/
-	color:green;
+    color:green;
 }
 
 /*a.mybutton {
-
  display: inline-block;
  width: 200px;
  height: 50px;
@@ -109,23 +124,22 @@ a.button:hover
  font-weight: bold;
  background: blue;
 }
-
 a.mybutton:hover { background: red; color: black; }*/
 
 h1 
 {
-	font-size: 40px; /* titre gigantesque */
-	font-family: Verdana,serif; /*police de caractère*/
-	color: indigo;
+    font-size: 40px; /* titre gigantesque */
+    font-family: Verdana,serif; /*police de caractère*/
+    color: indigo;
     font-weight: bold;
     text-align: center;
 }
 p
 {
-	font-weight: bold;
-	text-align: justify;/*étire le texte*/
-	color : black;
-	/*opacity: 0.6;*/
+    font-weight: bold;
+    text-align: justify;/*étire le texte*/
+    color : black;
+    /*opacity: 0.6;*/
 }
 
 div.blocktextdiv {
@@ -137,17 +151,16 @@ div.blocktextdiv {
 
 p.blocktext
 {
-	/*margin-left: auto;
-	margin-right: auto;
-	width: 50.6em;*/
-  	margin: 3%;
-  	font-weight: bold;
-  	color: #000000;
+    /*margin-left: auto;
+    margin-right: auto;
+    width: 50.6em;*/
+    margin: 3%;
+    font-weight: bold;
+    color: #000000;
 }
-
 .imageflottante
 {
-	float: center;
+    float: center;
 }
 #searchbar{
     position:center;
@@ -168,20 +181,20 @@ p.blocktext
     float:left;
     border: 0.125rem solid #FFF;
     border-bottom-left-radius: 0.4rem;
-	border-top-left-radius: 0.4rem;
-	outline-style:none;
+    border-top-left-radius: 0.4rem;
+    outline-style:none;
 }
 #searchbar .bouton{
     background-image: url(loupe.png);
     background-repeat: no-repeat;
-	background-size: cover;
+    background-size: cover;
     width: 3.1em;
     height: 3.05em;
     padding: 0;
     border: none;
-	border-bottom-right-radius: 0.4rem;
-	border-top-right-radius: 0.4rem;
-	outline-style:none;
+    border-bottom-right-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    outline-style:none;
 }
 
 #fullbar
@@ -195,9 +208,9 @@ p.blocktext
 
 #centerall
 {
-	
-	text-align: center;
-	margin: auto;
+    
+    text-align: center;
+    margin: auto;
 
 }
 
@@ -211,8 +224,8 @@ p.blocktext
     float:left;
     border: 0.125rem solid #FFF;
     border-radius: 0.4rem;
-	outline-style:none;
-	margin-right: 1%;
+    outline-style:none;
+    margin-right: 1%;
     margin-bottom: 1%;
 }
 #demibar{
@@ -234,8 +247,8 @@ p.blocktext
     float:left;
     border: 0.125rem solid #FFF;
     border-radius: 0.4rem;
-	outline-style:none;
-	margin-right: 1.5%;
+    outline-style:none;
+    margin-right: 1.5%;
     margin-bottom: 1%;
 
 }
@@ -272,7 +285,7 @@ p.blocktext
 }
 
 label{
-    color :white;
+    color :grey;
     font-weight: bold;
     position: center;
 }
@@ -409,32 +422,3 @@ datalist option {
 
 
 /* Fin Slider JS */
-
-
-div.fondtrsp
-{
-background-color:rgba(255,255,255,0.2);
-color: black;
-}
-
-iframe {
-    border: 1px solid black;
-    width: 80%;
-}
-
-.output {
-    background: #eee;
-}
-
-table
-{
-    border-collapse: collapse; 
-    margin:auto;
-}
-
-td, th
-{
-    border: 1px solid black;
-    background-color: rgba(255,255,255,0.6);
-}
-
