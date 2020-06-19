@@ -112,18 +112,6 @@ section{
     width: 100%;
 }
 
-.twobars{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.twobars  #demibar{
-    position:center;
-    width:47.5%;
-    height:auto;
-}
 
 /*a.mybutton {
  display: inline-block;
@@ -177,7 +165,7 @@ p.blocktext
 {
     float: center;
 }
-#searchbar{
+.searchbar{
     position:center;
     width:70%;
     height:auto;
@@ -186,11 +174,11 @@ p.blocktext
     margin-bottom: 1em;
 
 }
-#searchbar .text{
+.searchbar .text{
     width:30em;
     float:left;    
 }
-#searchbar .champ{
+.searchbar .champ{
     width:80%;
     height:35px;
     float:left;
@@ -199,7 +187,7 @@ p.blocktext
     border-top-left-radius: 0.4rem;
     outline-style:none;
 }
-#searchbar .bouton{
+.searchbar .bouton{
     background-image: url(loupe.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,8 +248,21 @@ p.blocktext
     border-radius: 0.4rem;
     outline-style:none;
     margin-right: 1.5%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 
+}
+
+.twobars{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.twobars  .demibar{
+    position:center;
+    width:47.5%;
+    height:auto;
 }
 
 .slidecontainer {
