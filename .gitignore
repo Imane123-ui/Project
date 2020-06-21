@@ -16,3 +16,9 @@ v1/__pycache__/
 __pycache__/
 
 dfdd6504-b41b-4e6e-bde8-12937636375d.json
+
+db.sqlite3-journal
+
+v1/migrations/
+
+db.sqlite3

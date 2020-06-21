@@ -3,6 +3,7 @@ from math import floor
 from colorama import Fore, init
 import requests
 from datetime import datetime
+from . import models
 
 init()
 
@@ -49,10 +50,14 @@ def parse_data(data, city):
         if city.get("coord"):
             if city.get("coord").get("lat"):
                 weather["lat"] = city.get("coord").get("lat")
-            elif city.get("coord").get("lon"):
+            if city.get("coord").get("lon"):
                 weather["long"] = city.get("coord").get("lon")
         if curData.get("dt"):
             timestamp = curData.get("dt")
-            weather["weather"] = datetime.fromtimestamp(timestamp)
+            weather["date"] = datetime.fromtimestamp(timestamp)
 
         # TODO: add weather to db
+        b = models.Weather(Temperature_Weather=weather['temp'], Weather_Weather=weather['weather'],
+                           City_Weather=weather['city'], Latitude_Weather=weather['lat'],
+                           Longitude_Weather=weather['long'], Date_Weather=weather['date'])
+        b.save()

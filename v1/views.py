@@ -21,8 +21,8 @@ def index(request):
 def test(request):
     # fileName = poi_api.download_file()    TODO: uncomment
     # poi_api.parse_file(fileName)          TODO: uncomment
-    # poi_api.parse_file("dfdd6504-b41b-4e6e-bde8-12937636375d.json")
-    weather_api.get_data()
+    poi_api.parse_file("dfdd6504-b41b-4e6e-bde8-12937636375d.json")
+    # weather_api.get_data()
     return HttpResponse("<h1>titre</h1>")
 
 
