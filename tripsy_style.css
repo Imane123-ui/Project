@@ -482,7 +482,7 @@ tbody tr:nth-child(odd) {
 }
 
 #flexbox2{
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -507,7 +507,6 @@ tbody tr:nth-child(odd) {
 }
 
 h2{
-    position: center;
     color: orange;
 }
 
