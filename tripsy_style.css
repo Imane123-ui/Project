@@ -528,3 +528,10 @@ h2{
     align-self: center;
 }
 
+.gmaps-frame {
+    width: 910px;
+    height: 600px;
+    border: 0;
+    margin: auto;
+    display: block;
+}
