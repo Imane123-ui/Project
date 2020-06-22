@@ -187,7 +187,7 @@ p.blocktext
     border-top-left-radius: 0.4rem;
     outline-style:none;
 }
-.searchbar .bouton{
+.searchbar .button{
     background-image: url(loupe.png);
     background-repeat: no-repeat;
     background-size: cover;
