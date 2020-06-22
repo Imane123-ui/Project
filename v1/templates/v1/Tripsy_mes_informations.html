@@ -1,0 +1,83 @@
+{% extends "v1/base.html" %}
+{% block content %}
+    <section>
+
+        <p class="blocktext">Mes préférences :</p>
+        <form action="">
+
+            <div id="centerall">
+                <select name="préférences" id="preferences">
+                    <option value="">--centre d'intérêt 1--</option>
+                    <option value="Animaux autorisés">Animaux autorisés</option>
+                    <option value="Supérette à proximité">Supérette à proximité</option>
+                    <option value="Parking gratuit">Parking gratuit</option>
+                    <option value="Wifi gratuit">Wifi gratuit</option>
+                    <option value="Enfants autorisés">Enfants autorisés</option>
+                    <option value="Accès handicapé">Accès handicapé</option>
+                </select>
+                <select name="préférences" id="preferences">
+                    <option value="">--centre d'intérêt 2--</option>
+                    <option value="Animaux autorisés">Animaux autorisés</option>
+                    <option value="Supérette à proximité">Supérette à proximité</option>
+                    <option value="Parking gratuit">Parking gratuit</option>
+                    <option value="Wifi gratuit">Wifi gratuit</option>
+                    <option value="Enfants autorisés">Enfants autorisés</option>
+                    <option value="Accès handicapé">Accès handicapé</option>
+                </select>
+                <select name="préférences" id="preferences">
+                    <option value="">--centre d'intérêt 3--</option>
+                    <option value="Animaux autorisés">Animaux autorisés</option>
+                    <option value="Supérette à proximité">Supérette à proximité</option>
+                    <option value="Parking gratuit">Parking gratuit</option>
+                    <option value="Wifi gratuit">Wifi gratuit</option>
+                    <option value="Enfants autorisés">Enfants autorisés</option>
+                    <option value="Accès handicapé">Accès handicapé</option>
+                </select>
+                <select name="préférences" id="preferences">
+                    <option value="">--centre d'intérêt 4--</option>
+                    <option value="Animaux autorisés">Animaux autorisés</option>
+                    <option value="Supérette à proximité">Supérette à proximité</option>
+                    <option value="Parking gratuit">Parking gratuit</option>
+                    <option value="Wifi gratuit">Wifi gratuit</option>
+                    <option value="Enfants autorisés">Enfants autorisés</option>
+                    <option value="Accès handicapé">Accès handicapé</option>
+                </select>
+
+
+                <input class="bouton" type="button"
+                       value="Envoyer">
+
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <p class="blocktext">Connexion à Tripsy</p>
+        <form action="{% url "profil" %}" method="post">
+            {% csrf_token %}
+            <div class="fullbar">
+                {{ formProfile.nicknameField }}
+
+            </div>
+            <div class="fullbar">
+                {{ formProfile.oldPasswordField }}
+            </div>
+            <div class="twobars">
+                <div class="demibar">
+                    {{ formProfile.newPasswordField }}
+                </div>
+
+                <div class="demibar">
+                    {{ formProfile.confirmNewPasswordField }}
+                </div>
+            </div>
+            <div class="demibar">
+
+                <div id="centerall">
+                    <input class="bouton" type="submit" value="Valider les modifications">
+                </div>
+
+            </div>
+        </form>
+    </section>
+{% endblock %}

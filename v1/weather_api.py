@@ -10,7 +10,7 @@ init()
 
 def get_data():
     city_list = ["75000", "13000", "69002", "31000", "06000", "44000", "34000", "67000", "33000",
-                 "59800", "35000", "51100", "83000", "38000"]
+                 "59800", "35000", "51100", "83000", "38000", "59310", "59210", "61200", "78000", "59500"]
     for city in city_list:
         request = "http://api.openweathermap.org/data/2.5/forecast?zip={zip},fr&appid=870aa2e09b50f48983ad62061fabb082"
         request = request.replace("{zip}", city)

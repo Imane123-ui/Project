@@ -1,0 +1,50 @@
+{% extends "v1/base.html" %}
+{% block content %}
+    <section>
+        <p class="blocktext">
+        <div class="fondtrsp">Créez votre compte Tripsy</div>
+        </p>
+        {% if error %}
+            <p><strong>Cette adresse email est déja utilisée ou les mots de passes ne sont pas identiques</strong></p>
+        {% endif %}
+        <form action="{% url "create" %}" method="post">
+            {% csrf_token %}
+
+            <div class="twobars">
+                <div class="demibar">
+                    {{ form.firstnameField }}
+                </div>
+                <div class="demibar">
+                    {{ form.nameField }}
+                </div>
+            </div>
+            <div class="fullbar">
+                {{ form.nicknameField }}
+            </div>
+            <div class="fullbar">
+                {{ form.phoneField }}
+            </div>
+            <div class="fullbar">
+                {{ form.emailField }}
+            </div>
+            <div class="fullbar">
+                {{ form.passwordField }}
+            </div>
+            <div class="fullbar">
+                {{ form.confirmPasswordField }}
+            </div>
+            <div class="fullbar">
+                {{ form.birthdayField }}
+
+            </div>
+            <input type="submit" value="créer le compte">
+        </form>
+    </section>
+    <footer>
+
+    </footer>
+
+{% endblock %}
+
+
+

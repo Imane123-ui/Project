@@ -1,0 +1,98 @@
+{% extends "v1/base.html" %}
+{% load static %}
+{% block content %}
+    <section>
+
+
+        <form action="recherche" method="POST">
+            <div class="searchbar">
+                {% csrf_token %}
+                <label for="searchbar"> - Que recherchez-vous ?</label>
+                {{ form.researchContent }}
+                <input class="bouton" type="submit" value=""/>
+                {##}
+                <div class="twobars">
+                    <div class="demibar">
+                        <p> Date d'arrivée </p>
+                        {{ form.arrivalDate }}
+                    </div>
+                    <div class="demibar">
+                        <p>Date de départ</p>
+                        {{ form.leavingDate }}
+                    </div>
+                </div>
+                {{ form.distance }}
+                {{ form.price }}
+                <label for="distance"> - Distance en Km :</label>
+
+                <div class="containersliderjs">
+                    <div class="range-slider">
+                        <span id="rs-bullet" class="rs-label">0</span>
+                        <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="25">
+                    </div>
+                    <div class="box-minmax">
+                        <span>0 Km</span><span>25 Km</span>
+                    </div>
+                </div>
+
+                <label for="price"> - Prix en Euro(s) :</label>
+
+
+                <div class="containersliderjsbis">
+                    <div class="range-sliderbis">
+                        <span id="rs-bulletbis" class="rs-labelbis">1</span>
+                        <input id="rs-range-linebis" class="rs-rangebis" type="range" value="0" min="0" max="1000">
+                    </div>
+                    <div class="box-minmaxbis">
+                        <span>0 €</span><span>1 000 €</span>
+                    </div>
+                </div>
+                <div id="cases">
+                    <div>
+                        {{ form.children }}
+                        {{ form.children.label_tag }}
+{#                        <input type="checkbox" id="enfants" checked>#}
+{#                        <label for="enfants">Enfants autorisés</label>#}
+                    </div>
+
+                    <div>
+                        {{ form.disabled }}
+                        {{ form.disabled.label_tag }}
+                    </div>
+                    <div>
+                        {{ form.parking }}
+                        {{ form.parking.label_tag }}
+                    </div>
+
+                    <div>
+                        {{ form.wifi }}
+                        {{ form.wifi.label_tag }}
+                    </div>
+                </div>
+        </form>
+        </div>
+
+
+        <!--<script src="scriptjs.js"></script>-->
+
+
+        <script src="{% static "v1/scripts/scriptjs.js" %}"></script>
+
+
+        <p>Test Carte ci-dessous :
+        <p>
+
+        <div id="searchbar">
+
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.61828575199!2d3.046571715595865!3d50.634207481988376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d578da129f7d%3A0xd134d73fb7f4c699!2sISEN%20Lille!5e0!3m2!1sfr!2sfr!4v1591798375244!5m2!1sfr!2sfr"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+
+        </div>
+
+
+    </section>
+{% endblock %}
+
+

@@ -3,21 +3,28 @@
     <header>
         <div id="en-tete">
             <div id="logo">
-                <img src="{% static "v1/images/tripsy_logo.png" %}"
-                     style="width: 120px;"
-                     alt="Logo de Tripsy"
-                     class="imageflottante"/>
+                <a href="{% url "index" %}">
+                    <img src="{% static "v1/images/tripsy_logo.png" %}"
+                         style="width: 120px;"
+                         alt="Logo de Tripsy"
+                         class="imageflottante"/>
+                </a>
             </div>
             <div id="slogan">
                 <h1>Voyagez EASY</h1>
             </div>
+            {% if user.is_authenticated %}
+                <nav>
+                    <li class="my_profil">Mon Profil
+                        <ul class="DropDown">
+                            <li><a href="{% url "profil" %}">Mes informations</a></li>
+                            <li><a href="{% url "logout" %}">Déconnexion</a></li>
+                        </ul>
+                    </li>
+                </nav>
+            {% else %}
+                <a href="{% url "connexion" %}" class="my_profil">Connexion</a>
+            {% endif %}
 
-            <div id="pageConnexion"><a href="#">Connexion
-            </a></div>
-        </div>
-
-        <nav>
-
-        </nav>
     </header>
 {% endblock %}

@@ -1,0 +1,37 @@
+{% extends "v1/base.html" %}
+{% load static %}
+{% block content %}
+    <section>
+        <p class="blocktext">
+        <div class="fondtrsp">Connexion à Tripsy</div>
+        </p>
+        {% if error %}
+            <p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
+        {% endif %}
+        <form action="{% url "connexion" %}" method="post">
+            {% csrf_token %}
+            <div class="twobars">
+                <div class="demibar">
+                    {{ form.emailField }}
+                </div>
+                <div class="demibar">
+                    {{ form.passwordField }}
+                </div>
+            </div>
+            <div class="demibar">
+                <a href="{% url "create" %}"><input class="bouton" type="button" value="Inscription"></a>
+                <input class="bouton" type="submit" value="Connexion"/>
+            </div>
+        </form>
+
+
+    </section>
+
+    <footer>
+
+    </footer>
+    <footer>
+
+    </footer>
+{% endblock %}
+
