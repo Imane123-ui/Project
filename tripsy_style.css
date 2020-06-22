@@ -369,11 +369,11 @@ datalist option {
     font-weight: bold;
     padding-top: 3px;
     box-sizing: border-box;
-    border: 2px solid #383838;
+    border: 2px solid #FFF;
     margin-top: 0px;
     margin-left: -18.5px;
     left: attr(value);
-    color: #383838;
+    color: #FFF;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
@@ -420,11 +420,11 @@ datalist option {
     font-weight: bold;
     padding-top: 10px;
     box-sizing: border-box;
-    border: 2px solid #383838;
+    border: 2px solid #FFF;
     margin-top: 0px;
     margin-left: -18.5px;
     left: attr(value);
-    color: #383838;
+    color: #FFF;
     font-style: normal;
     font-weight: normal;
     line-height: normal;
