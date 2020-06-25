@@ -8,12 +8,15 @@ rangeSlider.addEventListener("input", showSliderValue, true);
 
 rangeSliderbis.addEventListener("input", showSliderValuebis, true);
 
+
+//setting the distance cursor
 function showSliderValue() {
   rangeBullet.innerHTML = rangeSlider.value;
   var bulletPosition = (rangeSlider.value /rangeSlider.max);
   rangeBullet.style.left = (bulletPosition * 582) + "px";
 }
 
+//setting the price cursor
 function showSliderValuebis() {
   rangeBulletbis.innerHTML = rangeSliderbis.value;
   var bulletPosition = (rangeSliderbis.value /rangeSliderbis.max);

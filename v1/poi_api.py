@@ -6,6 +6,7 @@ from . import models
 init()
 
 
+# getting all value matching the "path" in the "obj" object
 def get_value(path, obj):
     toRet = []
     if len(path) == 1:
@@ -34,6 +35,7 @@ def get_value(path, obj):
     return None
 
 
+# download file with all POI from the API
 def download_file():
     print(Fore.RED + "downloading started")
     url = "https://diffuseur.datatourisme.gouv.fr/webservice/553bf24520db65ae48916676671545d4/dfdd6504-b41b-4e6e-bde8-12937636375d"
@@ -51,6 +53,7 @@ def download_file():
     return local_filename
 
 
+# go through the downloaded file and add needed data to db
 def parse_file(file_name):
     with open("dfdd6504-b41b-4e6e-bde8-12937636375d.json", errors='ignore', encoding='utf-8') as file:
         items = ijson.items(file, "@graph.item")
@@ -59,7 +62,8 @@ def parse_file(file_name):
             add_place_to_db(item)
 
 
-def add_place_to_db(place):
+# adding needed place's data to db
+def add_place_to_db(place, weathers):
     newPlace = {
         "name": None,
         "desc": None,
@@ -113,6 +117,15 @@ def add_place_to_db(place):
         newPlace["long"] = pos_split[1]
         b.Latitude_Place = newPlace["lat"]
         b.Longitude_Place = newPlace["long"]
+        distances = []
+        for weather in weathers:
+            distances.append(distance2points(weather.Latitude_Weather, weather.Longitude_Weather, newPlace["lat"],
+                                             newPlace["long"]))
+        minDist = getMinDist(distances)
+        curWeathers = models.Weather.objects.all().filter(Latitude_Weather=minDist[1], Longitude_Weather=minDist[2])[:5]
+        b.save()
+        for curWeather in curWeathers:
+            b.Weather_Place.add(curWeather)
 
     # get website
     website = get_value(["hasContact", "foaf:homepage"], place)

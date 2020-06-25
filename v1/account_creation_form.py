@@ -1,7 +1,7 @@
 from django import forms
 from django.db import models
 
-
+# form used for the account creation page
 class AccountCreation(forms.Form):
     firstnameField = forms.CharField(label=False, widget=forms.TextInput(
         attrs={"placeholder": "Prénom", "class": "champ"}), required=True)

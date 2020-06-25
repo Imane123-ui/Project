@@ -1,6 +1,7 @@
 from django import forms
 
 
+# form used for the advanced research
 class ResearchForm(forms.Form):
     researchContent = forms.CharField(label=False, widget=forms.TextInput(
         attrs={"placeholder": "Chateau de Fontainebleau, Nîme ...", "class": "champ"}))
@@ -13,6 +14,7 @@ class ResearchForm(forms.Form):
         attrs={"class": "champ", "type": "date"}
     ), required=False)
 
+    # TODO: change these checkboxes to fit the type of trips
     children = forms.CharField(label="Enfants autorisés", widget=forms.CheckboxInput, required=False)
     disabled = forms.CharField(label="Accès handicapé", widget=forms.CheckboxInput, required=False)
     parking = forms.CharField(label="Parking gratuit", widget=forms.CheckboxInput, required=False)

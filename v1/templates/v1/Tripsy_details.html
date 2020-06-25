@@ -1,0 +1,94 @@
+{% extends "v1/base.html" %}
+{% load static %}
+{% block content %}
+    <section>
+        <article class="articleDesc">
+            <div class="lieu">
+                <div id="flexbox1">
+                    <div id="title"><h2> {{ result.Name_Place }} </h2></div>
+
+                    <iframe src="http://www.openstreetmap.org/export/embed.html?bbox={{ result.Longitude_Place }}%2C{{ result.Latitude_Place }}%2C{{ result.Longitude_Place }}%2C{{ result.Latitude_Place }}&layer=mapnik&marker={{ result.Latitude_Place }}%2C{{ result.Longitude_Place }}"
+                            width="100%" height="90%" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+                <div id="flexbox2">
+                    <p class="blocktext">{{ result.Description_Place }}</p>
+                    {% if result.Link_Place != "" %}
+                        <a href="{{ result.Link_Place }}">Continuer vers le site internet de ce lieu</a>
+                    {% endif %}
+                </div>
+
+                <div id="flexbox3">
+                    <img src="{% static "v1/images/SmileyVert.jpg" %}" label="Avis des utilisateurs">
+
+                    <div class="photo">
+                        <img src="{{ result.Photo_Place }}" alt="Pas d'image disponible"/>
+                    </div>
+                </div>
+
+
+            </div>
+        </article>
+
+
+        <div class="twobars">
+            <div class="demibar">
+                <p>
+                <div class="fondtrsp"> Date d'arrivée</div>
+                </p>
+                <form action="">
+                    <input class="champ" type="date" placeholder="jj/mm/aaaa"/>
+                </form>
+            </div>
+            <div class="demibar">
+                <p>
+                <div class="fondtrsp">Date de départ</div>
+                </p>
+                <form action="">
+                    <input class="champ" type="date" placeholder="jj/mm/aaaa"/>
+                </form>
+            </div>
+        </div>
+
+
+
+        {% if result.Price_Place %}
+            <p>
+            <div class="fondtrsp">à partir de</div>
+            {{ result.Price_Place }}€
+            </p>
+
+        {% endif %}
+
+        <div id="weathers">
+            {% for weather in  weathers %}
+                <div class="weather">
+                    <div class="temperature">{{ weather.Temperature_Weather }}°C</div> <!-- températures max et min -->
+                    {% if "rain" in weather.Weather_Weather %}
+                        <img src="{% static "v1/images/rain.png" %}">
+                    {% endif %}
+                    {% if "cloud" in weather.Weather_Weather or "mist" in weather.Weather_Weather %}
+                        <img src="{% static "v1/images/cloud.png" %}">
+                    {% endif %}
+                    {% if "thunder" in weather.Weather_Weather %}
+                        <img src="{% static "v1/images/thunder.png" %}">
+                    {% endif %}
+                    {% if "snow" in weather.Weather_Weather %}
+                        <img src="{% static "v1/images/snow.png" %}">
+                    {% endif %}
+                    {% if "clear sky" in weather.Weather_Weather %}
+                        <img src="{% static "v1/images/sun.png" %}">
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+
+        <script src="{% static "v1/scripts/scriptjs.js" %}"></script>
+
+    </section>
+{% endblock %}
+
+
+

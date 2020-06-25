@@ -3,7 +3,7 @@ from django import forms
 
 # TODO: create select-options
 
-
+# setting the profil db with user's data that can't be store in Django's User db
 class EditProfile(forms.Form):
     nicknameField = forms.CharField(widget=forms.TextInput(attrs={
         "placeholder": "Nom d'utilisateur", "class": "champ"
